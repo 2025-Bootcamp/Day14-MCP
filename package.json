@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "inspector": "npx @modelcontextprotocol/inspector"
+    "inspector": "npx @modelcontextprotocol/inspector",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:check": "eslint . --format=compact"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +16,16 @@
   "description": "",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.4",
+    "axios": "^1.11.0",
     "zod": "^3.25.76"
   },
   "bin": {
     "@xbl/day14-mcp": "first.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "eslint": "^9.34.0",
+    "eslint-formatter-compact": "^8.40.0",
+    "globals": "^16.3.0"
   }
 }
